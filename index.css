@@ -1,0 +1,106 @@
+.face-zone {
+    display: flex;
+    justify-content: center;
+}
+
+
+.dgr {
+    width:200px; 
+    height: 250px; 
+    background-color: rgb(214, 193, 166);
+    border-radius: 80% 80% 45% 45%;
+    position: relative;
+}
+
+
+.dgr .hair { 
+    position:absolute;
+    top:0;
+    left:30px;
+    width:124px;
+    height:24px;
+    background-color:rgb(226, 227, 148);
+
+}
+.dgr .left-eye {
+    width:25px; 
+    height:25px;
+    position:absolute;
+    top:130px;
+    left:20%;
+    background-color:#fff;
+    border-radius: 100% 100%;
+}
+.dgr .left-eye::before {
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 100%;
+    content: "";
+}
+.dgr .right-eye::before {
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 100%;
+    content: "";
+}
+.dgr .eye {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.dgr .right-eye {
+    width:25px; 
+    height:25px;
+    position:absolute;
+    top:130px;
+    right:20%;
+    background-color:#fff;
+    border-radius: 100% 100%;
+}
+ul{
+    list-style:none;
+    padding-left:0px;
+}
+
+
+:root {
+    --nose-width: 25px;
+}
+.dgr .nose {
+    position: absolute;
+    width: var( --nose-width);
+    height:50px;
+    display: inline-block;
+    background-color: rgb(209, 179, 139);
+    left: calc((100% -  var( --nose-width)) / 2);
+    top:65%;
+}
+
+.dgr .mouth {
+    position: absolute;
+    width:25%;
+    height:30px;
+    border-radius: 0 0 100% 100%;
+    background-color: #c64242;
+    left:50%;
+    right:  50%; 
+    transform: translate(-50%, -50%);
+    bottom:5%;
+}
+
+#controls .name {
+    font-size: 30px;
+}
+input {
+    width: 300px;
+}
+.adam-text {
+    
+    color:#fb2bf4;
+    font-size:30px;
+
+}
