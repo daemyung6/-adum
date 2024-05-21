@@ -1,15 +1,17 @@
 window.addEventListener('DOMContentLoaded', () => {
     const controlDiv = document.getElementById('controls')
+
     /**
      * 
      * @param {HTMLElement} element 
-     * @param {*} name 
-     * @param {*} min 
-     * @param {*} max 
-     * @param {*} unit 
-     * @param {*} initValue 
+     * @param {string} name 
+     * @param {number} min 
+     * @param {number} max 
+     * @param {number} initValue 
+     * @param { 'width' | 'height' } type 
+     * @param { 'px' | '%' } unit 
      */
-    function AddControl(element, name, min, max, unit, initValue, type) {
+    function AddControl(element, name, min, max, initValue, type, unit) {
         const hr = document.createElement('hr')
 
         const nameDiv = document.createElement('div')
@@ -39,7 +41,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    AddControl(document.querySelector('.dgr .mouth'), '입 너비', 10, 50, '%', 25, 'width')
-    AddControl(document.querySelector('.dgr .mouth'), '입 높이', 5, 30, 'px', 30, 'height')
-
+    AddControl(document.querySelector('.dgr .mouth'), '입 너비', 10, 50, 25, 'width', '%')
+    AddControl(document.querySelector('.dgr .mouth'), '입 높이', 5, 30, 30, 'height', 'px')
 })
